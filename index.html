@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List Web</title>
+    <link rel="stylesheet" href="css\style.css" />
+</head>
+<body>
+    <div class="boxtodo">
+        <h1 class="title">TO DO LIST MAKER</h1>
+        
+        <section>
+            <form>
+                <label for="activity">Activity: </label>
+                <input type="text" id="activity">
+            </form>
+            <form>
+                <label for="date">Date: </label>
+                <input type="date" id="date">
+            </form>
+        </section>
+
+        <section> 
+            <div class="button">
+                <button type="button" onclick="add_todo()">Add</button>
+                <button type="button">Filter
+                <select id="filterTime" onchange="rendertodo()">
+                  <option value="all">Semua Waktu</option>
+                  <option value="today">Hari Ini</option>
+                  <option value="upcoming">Mendatang</option>
+                  <option value="past">Sudah Terlewat</option>
+                </select></button>
+                <button type="button" onclick="deleteall()">Delete All</button>
+            </div>
+        </section>
+
+        <section>
+            <h1>To Do Lists</h1>
+            <ul id="list">
+                <li>No To Do Available</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="js\script.js"></script>
+</body>
+</html>
